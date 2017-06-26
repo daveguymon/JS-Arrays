@@ -60,7 +60,14 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 //Write a function named evenFinder that is given nums as it's only argument and removes all values that aren't even from the given array.
 
   //Code Here
+function evenFinder(arr){
+    var solution = arr.filter(function(val){
+        return val % 2 === 0;
+      })
+      return solution;
+}
 
+evenFinder(nums);
 
 //Next problem
 
@@ -72,7 +79,25 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 
 
   //Code Here
+function divider(arr){
+    var evensArr = [];
+    var oddsArr = [];
+    
+    var evens = arr.filter(function(val){
+        return val % 2 === 0;
+    });
+    var odds = arr.filter(function(val){
+      return val %2 !== 0;
+    });
+    
+    evensArr.push(evens);
+    oddsArr.push(odds);
+    
+    var solution = evensArr.concat(oddsArr);
+return solution;
+}
 
+divider(numbersArray);
 
 //Next Problem
 
@@ -80,15 +105,19 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 var getRandomArbitrary = function() {
   return Math.floor(Math.random() * 30);
 };
-// var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
+ var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
 //Above you're given a function that will return a random number between 0 and 30.  There is also a commented out array full of numbers to help you visualize what your function will be receiving.
 
 // Your job is to write a function named finder that will get a random number (by invoking getRandomArbitrary), then loop through the array (that will be passed in as a parameter) to see if that random number is in the array. If it is, return true, if it's not, return false
 
   //Code Here
-
-  //Code Here
-
+function finder(arr){
+    var num = getRandomArbitrary();
+    if(arr.indexOf(num) >= 0){
+        return true;
+    }
+    return false;
+}
 
 //Next problem
 
